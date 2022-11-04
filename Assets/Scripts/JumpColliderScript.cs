@@ -18,9 +18,9 @@ public class JumpColliderScript : MonoBehaviour
 
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player") && other.transform.position.y > 1.1)
+        if (other.CompareTag("Player"))
         {
             other.GetComponent<PlayerScript>().scorePoints += score;
         }
